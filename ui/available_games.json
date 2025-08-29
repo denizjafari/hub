@@ -1,0 +1,17 @@
+{
+    "Deep Breaths": ["1dReachHorizontal", "Pong"],
+    "Back Extensor": ["1dReachHorizontal", "Pong"],
+    "Trunk Rotation": ["1dReachHorizontal", "Pong"],
+    "Lateral Trunk Flexion": ["1dReachHorizontal", "Pong"],
+    "Seated Trunk Extension": ["1dReachHorizontal", "Pong"],
+    "Trunk Circle": ["1dReachHorizontal", "Pong"],
+    "Shoulder Abduction": ["1dReachHorizontal", "Pong"],
+    "Shoulder Flexion": ["1dReachHorizontal", "Pong"],
+    "Shoulder Rotation": ["1dReachHorizontal", "Pong"],
+    "Elbow Flexion": ["1dReachHorizontal", "Pong"],
+    "Wrist Flexion": ["1dReachHorizontal", "Pong"],
+    "Wrist Pronation": ["1dReachHorizontal", "Pong"],
+    "Shoulder Only": ["1dReachHorizontal", "Pong"],
+    "Elbow and shoulder": ["1dReachHorizontal", "Pong"],
+    "Wrist, elbow and shoulder": ["1dReachHorizontal", "Pong"]
+}
