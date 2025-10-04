@@ -1,0 +1,142 @@
+{
+  "system_info": {
+    "version": "2.0.0",
+    "name": "Enhanced Haptic Feedback System",
+    "description": "Multi-module haptic system with compensation detection"
+  },
+  "network_settings": {
+    "controller_port": 5006,
+    "module_port": 5005,
+    "discovery_timeout": 3.0,
+    "heartbeat_interval": 5.0,
+    "max_retry_attempts": 3
+  },
+  "haptic_modules": [
+    {
+      "device_id": "Haptic_01",
+      "location": "Right Deltoid",
+      "muscle_group": "shoulder",
+      "default_intensity": 0.7,
+      "max_intensity": 0.9,
+      "compensation_threshold": 0.7
+    },
+    {
+      "device_id": "Haptic_02", 
+      "location": "Left Deltoid",
+      "muscle_group": "shoulder",
+      "default_intensity": 0.7,
+      "max_intensity": 0.9,
+      "compensation_threshold": 0.7
+    },
+    {
+      "device_id": "Haptic_03",
+      "location": "Right Forearm", 
+      "muscle_group": "elbow",
+      "default_intensity": 0.7,
+      "max_intensity": 0.9,
+      "compensation_threshold": 0.6
+    },
+    {
+      "device_id": "Haptic_04",
+      "location": "Left Forearm",
+      "muscle_group": "elbow", 
+      "default_intensity": 0.7,
+      "max_intensity": 0.9,
+      "compensation_threshold": 0.6
+    },
+    {
+      "device_id": "Haptic_05",
+      "location": "Right Scapula",
+      "muscle_group": "trunk",
+      "default_intensity": 0.7,
+      "max_intensity": 0.9,
+      "compensation_threshold": 0.5
+    },
+    {
+      "device_id": "Haptic_06",
+      "location": "Left Scapula",
+      "muscle_group": "trunk",
+      "default_intensity": 0.7,
+      "max_intensity": 0.9,
+      "compensation_threshold": 0.5
+    }
+  ],
+  "signal_patterns": {
+    "queue_tap": {
+      "frequency_hz": 2.0,
+      "duty_cycle": 0.3,
+      "intensity_range": [0.1, 0.4],
+      "description": "Gentle tapping for movement queuing"
+    },
+    "alarm_sharp": {
+      "frequency_hz": 15.0,
+      "duty_cycle": 0.8,
+      "intensity_range": [0.7, 1.0],
+      "description": "Sharp, urgent signal for compensation warnings"
+    },
+    "buzz_standard": {
+      "frequency_hz": 8.0,
+      "duty_cycle": 0.6,
+      "intensity_range": [0.3, 0.8],
+      "description": "Standard haptic feedback"
+    }
+  },
+  "compensation_detection": {
+    "shoulder_elevation": {
+      "threshold": 0.7,
+      "affected_modules": ["Haptic_01", "Haptic_02"],
+      "severity_mapping": {
+        "low": 0.7,
+        "medium": 0.8,
+        "high": 0.9
+      }
+    },
+    "trunk_lateral_flexion": {
+      "threshold": 0.6,
+      "affected_modules": ["Haptic_05", "Haptic_06"],
+      "severity_mapping": {
+        "low": 0.6,
+        "medium": 0.7,
+        "high": 0.8
+      }
+    },
+    "arm_compensation": {
+      "threshold": 0.8,
+      "affected_modules": ["Haptic_03", "Haptic_04"],
+      "severity_mapping": {
+        "low": 0.8,
+        "medium": 0.9,
+        "high": 1.0
+      }
+    }
+  },
+  "exercise_profiles": {
+    "shoulder_flexion": {
+      "target_modules": ["Haptic_01", "Haptic_02"],
+      "movement_guidance_intensity": 0.3,
+      "compensation_response_intensity": 0.9
+    },
+    "elbow_flexion": {
+      "target_modules": ["Haptic_03", "Haptic_04"],
+      "movement_guidance_intensity": 0.3,
+      "compensation_response_intensity": 0.8
+    },
+    "trunk_movement": {
+      "target_modules": ["Haptic_05", "Haptic_06"],
+      "movement_guidance_intensity": 0.2,
+      "compensation_response_intensity": 0.7
+    }
+  },
+  "unity_integration": {
+    "mqtt_broker": "localhost",
+    "mqtt_port": 1883,
+    "topic_prefix": "haptic/",
+    "update_frequency_hz": 30
+  },
+  "logging": {
+    "level": "INFO",
+    "session_logging": true,
+    "performance_metrics": true,
+    "compensation_events": true
+  }
+}

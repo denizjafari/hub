@@ -1,0 +1,64 @@
+{
+  "haptic_modules": [
+    {
+      "device_id": "Haptic_01",
+      "config_file": "haptic/configs/haptic_01.json",
+      "description": "Haptic feedback module",
+      "body_side": "right",
+      "muscle_group": "deltoid"
+    },
+    {
+      "device_id": "Haptic_02",
+      "config_file": "haptic/configs/haptic_02.json",
+      "description": "Haptic feedback module",
+      "body_side": "left",
+      "muscle_group": "deltoid"
+    },
+    {
+      "device_id": "Haptic_03",
+      "config_file": "haptic/configs/haptic_03.json",
+      "description": "Haptic feedback module",
+      "body_side": "right",
+      "muscle_group": "forearm"
+    },
+    {
+      "device_id": "Haptic_04",
+      "config_file": "haptic/configs/haptic_04.json",
+      "description": "Haptic feedback module",
+      "body_side": "left",
+      "muscle_group": "forearm"
+    },
+    {
+      "device_id": "Haptic_05",
+      "config_file": "haptic/configs/haptic_05.json",
+      "description": "Haptic feedback module",
+      "body_side": "right",
+      "muscle_group": "scapula"
+    },
+    {
+      "device_id": "Haptic_06",
+      "config_file": "haptic/configs/haptic_06.json",
+      "description": "Haptic feedback module",
+      "body_side": "left",
+      "muscle_group": "scapula"
+    }
+  ],
+  "network_settings": {
+    "default_ssid": "Deniz",
+    "default_port": 5005,
+    "default_token": "change-me",
+    "discovery_timeout": 3.0,
+    "broadcast_addresses": [
+      "192.168.1.255",
+      "192.168.0.255",
+      "192.168.86.255",
+      "10.0.0.255"
+    ]
+  },
+  "default_settings": {
+    "default_intensity": 0.8,
+    "max_intensity": 1.0,
+    "default_duration_ms": 2000,
+    "beep_enabled": false
+  }
+}

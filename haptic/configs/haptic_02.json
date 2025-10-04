@@ -1,0 +1,11 @@
+{
+  "ssid": "Deniz",
+  "password": "13711353",
+  "udp_port": 5005,
+  "device_id": "Haptic_02",
+  "token": "change-me",
+  "description": "Haptic feedback module",
+  "default_intensity": 0.7,
+  "max_intensity": 0.9,
+  "default_duration_ms": 2000
+}
